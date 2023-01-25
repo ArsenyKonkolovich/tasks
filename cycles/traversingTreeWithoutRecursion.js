@@ -37,5 +37,3 @@ const traversal = (tree) => {
     }
   }
 }
-
-traversal(tree)
