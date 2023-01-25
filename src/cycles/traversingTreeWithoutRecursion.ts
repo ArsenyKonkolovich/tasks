@@ -1,4 +1,9 @@
-let tree = {
+interface ITree {
+  data: number
+  refs?: ITree[]
+}
+
+let tree: ITree = {
   data: 1,
   refs: [
     {
@@ -19,9 +24,9 @@ let tree = {
   ],
 }
 
-const traversal = (tree) => {
-  let currentRef
-  let memory = [tree]
+const traversal = (tree: ITree): void => {
+  let currentRef: ITree | undefined
+  let memory: ITree[] = [tree]
 
   while ((currentRef = memory.pop())) {
     while (true) {
