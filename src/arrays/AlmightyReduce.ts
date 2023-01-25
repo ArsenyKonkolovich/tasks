@@ -1,10 +1,8 @@
-type Collection = any[]
-
-export const myFilter = (
-  arr: Collection,
-  callback: (element: any) => boolean
-): Collection => {
-  return arr.reduce((acc, el) => {
+export const myFilter = <T>(
+  arr: T[],
+  callback: (element: T) => boolean
+): T[] => {
+  return arr.reduce((acc: T[], el: T) => {
     if (callback(el)) {
       acc.push(el)
     }
@@ -12,23 +10,20 @@ export const myFilter = (
   }, [])
 }
 
-export const myMap = (
-  arr: Collection,
-  callback: (element: any) => any
-): Collection => {
-  return arr.reduce((acc: any[], el: any) => {
+export const myMap = <T>(arr: T[], callback: (element: T) => T): T[] => {
+  return arr.reduce((acc: T[], el: T) => {
     const tmpEl = callback(el)
     acc.push(tmpEl)
     return acc
   }, [])
 }
 
-export const filterMap = (
-  arr: Collection,
-  filterCallback: (element: any) => boolean,
-  mapCallback: (element: any) => any
-): Collection => {
-  return arr.reduce((acc: any[], el: any) => {
+export const filterMap = <T>(
+  arr: T[],
+  filterCallback: (element: T) => boolean,
+  mapCallback: (element: T) => T
+): T[] => {
+  return arr.reduce((acc: T[], el: T) => {
     if (filterCallback(el)) {
       const tmpEl = mapCallback(el)
       acc.push(tmpEl)
