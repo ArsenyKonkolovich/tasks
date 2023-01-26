@@ -1,4 +1,5 @@
-import { isMoreThan10 } from '../src/conditions/moreThan10AndEven'
+// import { isMoreThan10 } from '../src/conditions/moreThan10AndEven'
+const isMoreThan10 = require('../src/conditions/moreThan10AndEven')
 
 describe('sum module', () => {
   test('adds 1 + 2 to equal 3', () => {

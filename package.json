@@ -1,7 +1,6 @@
 {
   "name": "tasks",
   "version": "1.0.0",
-  "type": "module",
   "description": "Some JS tasks",
   "main": "index.js",
   "scripts": {
@@ -23,6 +22,7 @@
     "@types/node": "18.11.18",
     "@types/ws": "8.5.3",
     "ts-jest": "^29.0.5",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "jest": "^29.4.0"
   }
 }
