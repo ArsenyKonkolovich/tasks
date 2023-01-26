@@ -1,8 +1,8 @@
-export const evenNumbers = (arr: number[] | []): number[] | [] => {
+export const getEvenNumbers = (arr: number[] | []): number[] | [] => {
   return arr.filter((num) => num % 2 === 0)
 }
 
-export const sumNumbersBiggerThan = (
+export const getSumNumbersBiggerThan = (
   arr: number[] | [],
   num: number
 ): number => {
