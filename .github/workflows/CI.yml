@@ -18,6 +18,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Run install
+        run: npm ci
+
       - name: Test & coverage
         uses: paambaati/codeclimate-action@v2.7.4
         env:
