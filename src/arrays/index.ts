@@ -1,5 +1,6 @@
 import { getEvenNumbers, getSumNumbersBiggerThan } from './sumAndEvenFilter'
 import { myFilter, myMap, filterMap } from './AlmightyReduce'
+import { Foo } from './objectMethod'
 
 const arrays = {
   getEvenNumbers,
@@ -7,6 +8,7 @@ const arrays = {
   myFilter,
   myMap,
   filterMap,
+  Foo,
 }
 
 export default arrays

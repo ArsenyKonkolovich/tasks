@@ -1,6 +1,7 @@
 import conditions from '../src/conditions/index'
 import cycles from '../src/cycles/index'
 import arrays from '../src/arrays/index'
+import { Foo, Types } from '../src/arrays/objectMethod'
 
 describe('Condition', () => {
   test('Is more than 10', () => {
@@ -100,5 +101,26 @@ describe('Arrays', () => {
 
     expect(expectedNum).toEqual(actualNum)
     expect(expectedStr).toEqual(actualStr)
+  })
+
+  test('Object Foo', () => {
+    const foo1 = new Foo(5, Types.BEST, new Date(), 'Sosat')
+    const foo2 = new Foo(7, Types.AVERAGE, new Date(), 'Lezhat')
+    const foo3 = new Foo(2, Types.BEST, new Date(), 'Bla bla')
+    const foo4 = new Foo(17, Types.WORST, new Date(), 'Pampam')
+
+    const arrOfFoo = [foo1, foo2, foo3, foo4]
+    const expected1 = foo1.stringifyArray(arrOfFoo, Types.AVERAGE, 2, 0)
+    const expected2 = foo1.stringifyArray(arrOfFoo, Types.BEST, 4, 0)
+    const actual1 = [
+      '1 - 26.0.2023 Была добавлена строка 7 c содержимым Lezhat',
+    ]
+    const actual2 = [
+      '0 - 26.0.2023 Была добавлена строка 5 c содержимым Sosat',
+      '2 - 26.0.2023 Была добавлена строка 2 c содержимым Bla bla',
+    ]
+
+    expect(expected1).toEqual(actual1)
+    expect(expected2).toEqual(actual2)
   })
 })
