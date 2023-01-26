@@ -4,3 +4,5 @@ const lineIntersection = (str1: string, str2: string): string => {
     .filter((word) => str2.includes(word))
     .join('')
 }
+
+export default lineIntersection

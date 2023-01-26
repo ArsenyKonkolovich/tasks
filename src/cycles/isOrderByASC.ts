@@ -1,13 +1,21 @@
-type NumberOrStringArr = number[] | string[]
+// type NumberOrStringArr = number[] | string[]
 
-const orderByASC = (...arr: NumberOrStringArr): NumberOrStringArr => arr.sort()
+// const orderByASCstr = (...arr: string[]): string[] => {
+//   return arr.sort()
+// }
 
-const isOrderByASC = (arr: NumberOrStringArr): boolean => {
-  const sortedArr = orderByASC(...arr)
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] != sortedArr[i]) {
-      return false
-    }
-  }
-  return true
-}
+// const orderByASCnum = (...arr: number[]): number[] => {
+//   return arr.sort((a,b) => a - b)
+// }
+
+// const isOrderByASC = (arr: NumberOrStringArr): boolean => {
+//   const sortedArr = orderByASCstr(...arr)
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] != sortedArr[i]) {
+//       return false
+//     }
+//   }
+//   return true
+// }
+
+// export default isOrderByASC
